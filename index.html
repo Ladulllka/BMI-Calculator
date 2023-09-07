@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/TaskTwo/scripts/bmiHandler.js" defer></script>
+    <link rel="stylesheet" href="/TaskOne/styles/style.css">
+    <link rel="stylesheet" href="/TaskTwo/styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Индекс массы тела</h1>
+        <p id="innerText">Введите свои данные в форму ниже и нажмите кнопку "Рассчитать", чтобы узнать ваш индекс массы тела и его описание.</p>
+        <div class="task" id="task">
+            <form id="bmi-form">
+                <div class="labelInput">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required><br>
+                </div>
+            
+                <div class="labelInput">
+                    <label for="age">Возраст:</label>
+                    <input type="number" id="age" name="age" min="0" required><br>
+                </div>
+            
+                <div class="labelInput">
+                    <label for="height">Рост (в сантиметрах):</label>
+                    <input type="number" id="height" name="height" min="67" max="251" required><br>
+                </div>
+
+                <div class="labelInput">
+                    <label for="weight">Вес (в килограммах):</label>
+                    <input type="number" id="weight" name="weight" min="14.5" max="635" required><br>
+                </div>
+            </form>
+          <button type="button" id="calculate-button">Рассчитать</button>
+        </div>
+    </div>   
+  </body>
+</html>
