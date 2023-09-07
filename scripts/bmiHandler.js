@@ -76,10 +76,10 @@ let descriptions = [
 ];
 
 /**
- * Расчет 
- * @param {} weight 
- * @param {*} height 
- * @returns 
+ * Расчет индекса массы тела.
+ * @param {numeric} weight - масса.
+ * @param {numeric} height - высота.
+ * @returns
  */
 function calculateBmi(weight, height) {
 	checkValidRange(weight, MIN_WEIGHT, MAX_WEIGHT);
@@ -89,6 +89,11 @@ function calculateBmi(weight, height) {
 	return bmi;
 }
 
+/**
+ * Получение описания индекса массы тела.
+ * @param {numeric} bmi - индекс массы тела.
+ * @returns описание массы тела.
+ */
 function describeBmi(bmi) {
 	if (bmi <= 0) {
 		throw (bmi, "ИМТ равен меньше или равен 0");
@@ -101,12 +106,24 @@ function describeBmi(bmi) {
 	}
 }
 
+/**
+ * Проверка числа на принадлежность промежутку.
+ * @param {number} value - значение для проверки. 
+ * @param {numeric} minRange - минимальная граница.
+ * @param {*} maxRange - максимальная граница.
+ */
 function checkValidRange(value, minRange, maxRange) {
 	if (!(value > minRange && value < maxRange)) {
 		throw value;
 	}
 }
 
+/**
+ * Вывести индекс массы тела с описанием.
+ * @param {string} name - Имя.
+ * @param {number} height  - Высота.
+ * @param {number} weight - Масса.
+ */
 function ShowBmi(name, height, weight) {
 	try {
 		checkValidRange(height, MIN_HEIGHT, MAX_HEIGHT);
@@ -135,6 +152,9 @@ function ShowBmi(name, height, weight) {
 	}
 }
 
+/**
+ * Навешивание функции на нажатие кнопки.
+ */
 calculateButton.addEventListener("click", function () {
 	ShowBmi(nameInput.value, heightInput.value, weightInput.value);
 });
