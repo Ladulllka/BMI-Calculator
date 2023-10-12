@@ -36,3 +36,33 @@ button {
 	border-width: 3px;
 	border-style: double;
 }
+
+/**
+* Позиционирование блока с заданием в центр страницы, позиционирование дочерних объектов блока по середине в столбец,
+* установка максимальной высоты и ширины блока с заданием, добавление внутреннего отступа, добавление границ и тени.
+*/
+.task{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 2px rgba(0,26,52,.16);
+    max-width: 400px;
+    align-items: center;
+    padding: 3%;
+}
+
+/**
+* Позиционирование основного блока в центре страницы, установка максимальной ширины и длины, 
+* позиционирование дочерних блоков в по середине в столбец.
+*/
+.container{
+    width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
